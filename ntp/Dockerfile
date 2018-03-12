@@ -3,6 +3,6 @@ MAINTAINER dy@shayulei.com
 
 RUN yum -y install ntp
 ADD https://github.com/shayulei/dockersfiles/blob/master/ntp/ntp.conf /etc/ntp.conf
-CMD["ntpd"]
+CMD["/usr/sbin/ntpd"]
 
 EXPOSE 123
