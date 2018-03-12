@@ -8,5 +8,4 @@ RUN yum -y install ntp \
     && rm -rf /etc/ntp.conf \
     && chmod +x /start.sh
     
-
-#ENTRYPOINT ["/usr/sbin/ntpd","-p","/tmp/ntpd.pid","-d"]
+ENTRYPOINT ["/start.sh"]
