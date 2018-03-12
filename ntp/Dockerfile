@@ -1,8 +1,10 @@
 FROM centos:7.4.1708
 MAINTAINER dy@shayulei.com
 
-RUN yum -y install ntp
+RUN yum -y install ntp \
+    && rm -rf /etc/ntp.conf \
+    &&yum clear all
 ADD https://raw.githubusercontent.com/shayulei/dockersfiles/master/ntp/ntp.conf /etc/ntp.conf
-CMD["/usr/sbin/ntpd"]
+ENTRYPOINT ["/usr/sbin/ntpd"]
 
 EXPOSE 123
