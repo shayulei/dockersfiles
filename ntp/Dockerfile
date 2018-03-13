@@ -8,6 +8,6 @@ RUN yum -y install ntp \
 ADD https://raw.githubusercontent.com/shayulei/dockersfiles/master/ntp/ntp.conf /etc/ntp.conf 
 ADD https://raw.githubusercontent.com/shayulei/dockersfiles/master/ntp/start.sh /
 
-RUM chmod +x /start.sh         # 设置脚本权限
+RUN chmod +x /start.sh         # 设置脚本权限
     
 ENTRYPOINT ["/start.sh"]       # 设置启动脚本
