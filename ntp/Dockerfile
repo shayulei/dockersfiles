@@ -10,4 +10,4 @@ RUN yum -y install ntp \
 
 ADD https://raw.githubusercontent.com/shayulei/dockersfiles/master/ntp/ntp.conf /etc/ntp.conf
 
-ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["/usr/local/bin/start.sh"]
