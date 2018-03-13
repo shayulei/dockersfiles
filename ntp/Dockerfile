@@ -6,8 +6,8 @@ RUN yum -y install ntp \
     && yum clean all
     
 ADD https://raw.githubusercontent.com/shayulei/dockersfiles/master/ntp/ntp.conf /etc/ntp.conf 
-ADD https://raw.githubusercontent.com/shayulei/dockersfiles/master/ntp/start.sh /
+ADD https://raw.githubusercontent.com/shayulei/dockersfiles/master/ntp/start.sh /start.sh
 
 RUN chmod +x /start.sh
-    
+
 ENTRYPOINT ["/start.sh"]
